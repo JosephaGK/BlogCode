@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="EclipseCodeFormatterProjectSettings">
+    <option name="projectSpecificProfile">
+      <ProjectSpecificProfile>
+        <option name="formatter" value="ECLIPSE" />
+      </ProjectSpecificProfile>
+    </option>
+    <option name="selectedGlobalProfile">
+      <Settings>
+        <option name="id" value="1545118324198" />
+        <option name="name" value="new" />
+        <option name="pathToConfigFileJava" value="E:/办公文件/联信/联信催收/项目文件/lxformatter.xml" />
+        <option name="selectedJavaProfile" value="Eclipse [built-in] - zxpt" />
+      </Settings>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+
+    <classPathEntry
+            location="E:\workspace-lxcs-trunk\lxcs\lxcs-mybatis-generator\src\main\resources\mysql-connector-java-5.1.30.jar"/>
+
+    <context id="doyumDB" targetRuntime="MyBatis3">
+        <property name="autoDelimitKeywords" value="true"/>
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+        <plugin type="com.lxcs.mybatis.generator.mysql.plugins.MysqlPagingPlugin">
+            <property name="isMergeable" value="false"></property>
+        </plugin>
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin"/>
+        <commentGenerator>
+            <property name="suppressAllComments" value="true"/>
+            <property name="suppressDate" value="true"/>
+        </commentGenerator>
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://172.16.1.101:3306/lxcs_dev?characterEncoding=utf-8"
+                        userId="lianxin" password="LX@789023234"></jdbcConnection>
+
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+
+        <javaModelGenerator targetPackage="com.lxcs.mybatis.bean.auto"
+                            targetProject="E:\workspace-lxcs-trunk\lxcs\lxcs-mybatis/src/main/java">
+            <property name="enableSubPackages" value="false"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="com.lxcs.mybatis.mapper.xml.auto"
+                         targetProject="E:\workspace-lxcs-trunk\lxcs\lxcs-mybatis/src/main/java">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+
+        <javaClientGenerator type="XMLMAPPER"
+                             targetPackage="com.lxcs.mybatis.mapper.auto"
+                             targetProject="E:\workspace-lxcs-trunk\lxcs\lxcs-mybatis/src/main/java">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+
+
+        <!--<table tableName="c_m_fenjihw_number" domainObjectName="CMFenjihwNumber">
+            <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+            </table> -->
+        <!-- <table tableName="c_m_user_custom" domainObjectName="CMUserCustom">
+            <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+            </table> -->
+        <!-- <table tableName="lxcs_case_seek" domainObjectName="LxcsCaseSeek">
+            <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+            </table> -->
+        <!-- <table tableName="lxcs_plan_template" domainObjectName="LxcsPlanTemplate">
+            <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+            </table> -->
+        <!-- <table tableName="lxcs_cdno_cardinfo_temp" domainObjectName="LxcsXdnoCardinfoTemp">
+            <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+            </table> -->
+        <!-- <table tableName="lxcs_cdno_cardinfo_temp" domainObjectName="LxcsCdnoCardinfoTemp">
+            <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+            </table> -->
+        <!-- <table tableName="lxcs_heavy_assets_apply" domainObjectName="LxcsHeavyAssetsApply"
+            alias="t1"> <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+            </table> <table tableName="lxcs_heavy_assets_details" domainObjectName="LxcsHeavyAssetsDetails">
+            <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+            </table> <table tableName="lxcs_heavy_assets_refund" domainObjectName="LxcsHeavyAssetsRefund">
+            <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+            </table> -->
+        <!-- <table tableName="lxcs_other_notes" domainObjectName="LxcsOtherNotes">
+            <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+            </table> -->
+        <!-- <table tableName="lxcs_card_notes" domainObjectName="LxcsCardNotes">
+            <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+            </table> -->
+        <!-- <table tableName="c_m_department" domainObjectName="CMDepartment">
+            <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+            </table> -->
+
+        <!-- <table tableName="lxcs_level_details" domainObjectName="LxcsLevelDetails">
+            <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+            </table> -->
+        <!-- <table tableName="lxcs_excellent_case_apply" domainObjectName="LxcsExcellentCaseApply"
+            alias="t1"> <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+            </table> <table tableName="lxcs_level_star_config" domainObjectName="LxcsLevelStarConfig">
+            <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+            </table> <table tableName="lxcs_level_star_task" domainObjectName="LxcsLevelStarTask">
+            <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+            </table> -->
+        <!-- <table tableName="lxcs_search_case_level_config" domainObjectName="LxcsSearchCaseLevelConfig">
+            <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+            </table> -->
+        <!-- <table tableName="lxcs_excellent_case_category" domainObjectName="LxcsExcellentCaseCategory">
+            <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+            </table> -->
+        <!--<table tableName="lxcs_progress_visit" domainObjectName="LxcsProgressVisit">
+            <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+        </table>-->
+        <table tableName="lxcs_visit_car_info" domainObjectName="LxcsVisitCarInfo">
+            <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+        </table>
+        <!--  <table tableName="lxcs_common_case_config" domainObjectName="LxcsCommonCaseConfig">
+              <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+          </table> -->
+        <!-- <table tableName="lxcs_common_case_sms_config" domainObjectName="LxcsCommonCaseSmsConfig">
+            <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+        </table>
+        <table tableName="c_m_user" domainObjectName="CMUser">
+            <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+            </table> -->
+        <!-- <table tableName="lxcs_reduction_file_config" domainObjectName="LxcsReductionFileConfig">
+            <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+            </table> -->
+        <!-- 	<table tableName="lxcs_case" domainObjectName="LxcsCase">
+                <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+            </table> -->
+        <!-- <table tableName="lxcs_letter_config" domainObjectName="LxcsLetterConfig">
+            <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+            </table> -->
+        <!-- <table tableName="c_m_custom_user" domainObjectName="CMCustomUser">
+            <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+            </table> -->
+        <!-- <table tableName="lxcs_cdno_cardinfo_temp" domainObjectName="LxcsCdnoCardinfoTemp">
+            <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+            </table> -->
+
+        <!-- <table tableName="lxcs_excellent_case_situation" domainObjectName="LxcsExcellentCaseSituation"
+            alias="t1"> <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+            </table> <table tableName="lxcs_excellent_case_subcases" domainObjectName="LxcsExcellentCaseSubcases">
+            <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+            </table> -->
+        <!-- <table tableName="lxcs_excellent_case_return" domainObjectName="LxcsExcellentCaseReturn"
+           alias="t1"> <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+           </table> <table tableName="lxcs_excellent_case_return" domainObjectName="LxcsExcellentCaseReturn">
+           <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+           </table> -->
+        <!-- <table tableName="lxcs_version" domainObjectName="LxcsVersion"> <property
+            name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property> </table> -->
+        <!-- <table tableName="lxcs_case_log" domainObjectName="LxcsCaseLog"> <property
+            name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property> </table> -->
+        <!-- <table tableName="lxcs_level_star_config" domainObjectName="LxcsLevelStarConfig">
+            <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+            <generatedKey column="id" sqlStatement="MySql" type="post" identity="true"
+            /> </table> -->
+        <!-- <table tableName="lxcs_letter_apply" domainObjectName="LxcsLetterApply"
+            alias="t1"> <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+            </table> -->
+        <!-- <table tableName="lxcs_remind" domainObjectName="LxcsRemind" > <property
+            name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property> </table> -->
+        <!-- <table tableName="lxcs_remind_manager" domainObjectName="LxcsRemindManager"
+            > <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+            </table> -->
+        <!-- <table tableName="lxcs_phoneautocall" domainObjectName="LxcsPhoneautocall"
+            > <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+            </table> -->
+        <!--  <table tableName="lxcs_notice" domainObjectName="LxcsNotice" > <property
+            name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+             </table> -->
+        <!-- <table tableName="lxcs_quality" domainObjectName="LxcsQuality"> <generatedKey
+            column="id" sqlStatement="MySql" type="post" identity="true" /> <property
+            name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property> </table> -->
+        <!-- <table tableName="c_m_user" domainObjectName="CMUser"> <property name="rootClass"
+            value="com.lxcs.mybatis.bean.BaseBean"></property> </table>  -->
+        <!-- <table tableName="c_m_user_main" domainObjectName="CMUserMain"> <property
+            name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property> </table> -->
+        <!-- <table tableName="c_m_user_main_user" domainObjectName="CMUserMainUser">
+            <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+            </table> -->
+        <!-- <table tableName="lxcs_phoneautocall_config" domainObjectName="LxcsPhoneautocallConfig">
+            <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+            </table> -->
+        <!-- <table tableName="lxcs_billboard" domainObjectName="LxcsBillboard">
+            <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+            </table> -->
+        <!-- <table tableName="lxcs_billboard" domainObjectName="LxcsBillboard">
+            <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+            </table> -->
+        <!-- <table tableName="lxcs_problem_solve" domainObjectName="LxcsProblemSolve"
+            alias="t1"> <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+            </table> -->
+        <!-- 		 <table tableName="lxcs_find_method" domainObjectName="LxcsFindMethod" alias="t1">
+                 <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+                </table>
+                 <table tableName="lxcs_find_method_type" domainObjectName="LxcsFindMethodType" alias="t1">
+                 <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+                </table>
+                 <table tableName="lxcs_method_type" domainObjectName="LxcsMethodType" alias="t1">
+                 <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+                </table> -->
+
+        <!--
+        <table tableName="lxcs_sms_template_customer" domainObjectName="LxcsSmsTemplateCustomer">
+            <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
+        <table tableName="lxcs_sms_template_casestatus" domainObjectName="LxcsSmsTemplateCasestatus">
+            <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
+        <table tableName="lxcs_sms_template_department" domainObjectName="LxcsSmsTemplateDepartment">
+            <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>-->
+        <!--<table tableName="lxcs_sms_template_signature" domainObjectName="LxcsSmsTemplateSignature">
+            <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
+        <table tableName="lxcs_sms_template" domainObjectName="LxcsSmsTemplate">
+            <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
+        <table tableName="lxcs_phoneautocall" domainObjectName="LxcsPhoneautocall">
+            <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
+
+        <table tableName="lxcs_sms_send_history" domainObjectName="LxcsSmsSendHistory">
+            <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>            <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>>
+        <table tableName="lxcs_work_order_template" domainObjectName="LxcsWorkOrderTemplate">
+            <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+        </table>-->
+
+        <!--  <table tableName="lxcs_remind" domainObjectName="LxcsRemind" > <property
+                 name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property> </table>
+
+         <table tableName="lxcs_work_overtime" domainObjectName="LxcsWorkOvertime">
+             <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+         </table> -->
+        <!-- <table tableName="lxcs_yimi_number" domainObjectName="LxcsYimiNumber">
+            <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>  -->
+        <!-- <table tableName="c_m_menu_setting" domainObjectName="CMMenuSetting">
+            <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+        </table> -->
+        <!-- <table tableName="lxcs_msg_config" domainObjectName="LxcsMsgConfig">
+            <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+            <generatedKey column="pid" sqlStatement="MySql" identity="true"/>
+        </table>
+        <table tableName="lxcs_principal_config" domainObjectName="LxcsPrincipalConfig">
+            <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
+        <table tableName="lxcs_phoneautocall" domainObjectName="LxcsPhoneautocall"
+        > <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+        </table>        <table tableName="lxcs_mail_config" domainObjectName="LxcsMailConfig"
+        > <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+        </table>
+        <table tableName="lxcs_mail_history" domainObjectName="LxcsMailHistory"
+        > <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+        </table>
+        <table tableName="lxcs_casekeep_remind_config" domainObjectName="LxcsCasekeepRemindConfig">
+        	<property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+        </table>
+        <table tableName="lxcs_casekeep_apply" domainObjectName="LxcsCasekeepApply">
+        	<property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+        </table>
+        <table tableName="lxcs_card_info0" domainObjectName="LxcsCardInfo0">
+        	<property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+        </table>
+        <table tableName="lxcs_safe_sm_apply_remind_config" domainObjectName="LxcsSafeSmApplyRemindConfig">
+            <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+        </table> -->
+        <!--<table tableName="lxcs_phone_total" domainObjectName="LxcsPhoneTotal">
+            <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+        </table>-->
+        <!--<table tableName="lxcs_hr_visit_record_info" domainObjectName="LxcsHRVisitRecordInfo">
+            <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+        </table>
+        <table tableName="lxcs_hr_visit_car_record_info" domainObjectName="LxcsHRVisitCarRecordInfo">
+            <property name="rootClass" value="com.lxcs.mybatis.bean.BaseBean"></property>
+        </table>-->
+    </context>
+</generatorConfiguration>
+        <!-- CMD下执行 -->
+        <!-- mvn install:install-file -Dfile=D:/workspace-e-lxcs/lxcs-20170411/lxcs-mybatis-generator/target/lxcs-mybatis-generator-0.0.1-SNAPSHOT.jar
+            -DgroupId=lxcs -DartifactId=lxcs-mybatis-generator -Dversion=0.0.1-SNAPSHOT
+            -Dpackaging=jar -->
+        <!-- ta-mybatis-generator 工程上右键->Run As->Maven Build打开窗口后在Goals栏填写： mybatis-generator:generate -->
+        <!-- 然后run可生成代码 -->
