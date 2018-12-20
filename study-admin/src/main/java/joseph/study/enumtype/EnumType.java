@@ -1,14 +1,15 @@
 package joseph.study.enumtype;
+
 public enum EnumType {
 
 	/**
 	 * 红色
 	 */
-	RED(1,"红色"),
+	RED(1, "红色"),
 	/**
 	 * 绿色
 	 */
-	GREEN(2,"绿色");
+	GREEN(2, "绿色");
 
 	private Integer key;
 	private String value;
