@@ -15,8 +15,8 @@ import java.io.IOException;
 		@WebInitParam(name = "userName", value = "joseph"), @WebInitParam(name = "age", value = "18") })
 public class ServletAnnotation extends HttpServlet {
 
-	private String userName;
-	private String age;
+	String userName;
+	String age;
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
