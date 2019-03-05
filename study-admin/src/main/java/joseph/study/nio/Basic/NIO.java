@@ -61,7 +61,7 @@ public class NIO {
 			boolean isReadable(Path path) : 判断文件是否可读
 			boolean isWritable(Path path) : 判断文件是否可写
 			boolean notExists(Path path, LinkOption … opts) : 判断文件是否不存在
-			public static <A extends BasicFileAttributes> A readAttributes(Path path,Class<A> type,LinkOption... options) : 获取与 path 指定的文件相关联的属性。
+			public statictype <A extends BasicFileAttributes> A readAttributes(Path path,Class<A> type,LinkOption... options) : 获取与 path 指定的文件相关联的属性。
 	 */
 	@Test
 	public void test6() throws IOException{

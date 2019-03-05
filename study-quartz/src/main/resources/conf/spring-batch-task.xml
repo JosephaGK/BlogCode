@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+	<!-- 总管理类 如果将lazy-init='false'那么容器启动就会执行调度程序 -->
+	<bean id="startTestTask" lazy-init="false" autowire="no"
+		class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<!-- ******************** 开启定时任务添加在该List列表当中 ******************** -->
+				<ref bean="xmlTypeTime" />
+			</list>
+		</property>
+    </bean>
+
+<!-- ******************** 业务定时任务控制添加在下面区域 ******************** -->
+
+	<!-- *********可联识别更新定时任务流程  ********* -->
+	<bean id="xmlTypeTaskClass" class="quartz.statictype.XmlTypeTask"></bean>
+	<!-- 定义调用对象和调用对象的方法 -->
+	<bean id="xmlTypeTask"
+		  class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<!-- 调用的类 -->
+		<property name="targetObject" ref="xmlTypeTaskClass" />
+		<!-- 调用类中的方法 -->
+		<property name="targetMethod" value="taskMethod" />
+	</bean>
+	<!-- 定义触发时间-->
+	<bean id="xmlTypeTime"
+		  class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="xmlTypeTask" />
+		<property name="cronExpression" value="0/5 * * * * ? " />
+	</bean>
+</beans>

@@ -13,6 +13,8 @@
         <module>study-mybatis-generator</module>
         <module>spring-soundcode</module>
         <module>study-common</module>
+        <module>study-quartz</module>
+        <module>study-shiro</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -30,6 +32,7 @@
         <org.mybatis.generator.version>1.3.3</org.mybatis.generator.version>
         <mysql.connector.java.version>5.1.30</mysql.connector.java.version>
         <commons-email.version>1.4</commons-email.version>
+        <spring.version>5.1.3.RELEASE</spring.version>
     </properties>
 
     <build>
@@ -122,7 +125,12 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
-            <version>5.1.3.RELEASE</version>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+            <version>${spring.version}</version>
         </dependency>
         <!-- springmvc end -->
         <!--mybatis核心-->
@@ -193,9 +201,5 @@
             <version>6.5.4</version>
         </dependency>
         <!-- elasticsearch客户端 -->
-
-
-
-
     </dependencies>
 </project>
