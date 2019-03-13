@@ -8,7 +8,7 @@ import org.apache.shiro.realm.jdbc.JdbcRealm;
 import org.apache.shiro.subject.Subject;
 import org.junit.Test;
 
-public class JdbcRealmTest {
+public class JdbcRealmCustomTest {
 	DruidDataSource dataSource = new DruidDataSource();
 	{
 		dataSource.setUrl("jdbc:mysql://localhost:3306/study-shiro");
@@ -22,6 +22,17 @@ public class JdbcRealmTest {
 		jdbcRealm.setDataSource(dataSource);
 		//设置查询权限的开关，默认关闭
 		jdbcRealm.setPermissionsLookupEnabled(true);
+
+		//设置自定义的认证sql
+		String authSql = "select password from custom_user where user_name = ? ";
+		jdbcRealm.setAuthenticationQuery(authSql);
+		//设置自定义的角色sql
+		String roleSql = "select role_name from custom_user_role where user_name = ?";
+		jdbcRealm.setUserRolesQuery(roleSql);
+		//设置自定义的权限sql
+		String permissionSql = "select per from custom_permissions where role_name = ?";
+		jdbcRealm.setPermissionsQuery(permissionSql);
+
 		//1.构建securityManager环境
 		DefaultSecurityManager manager = new DefaultSecurityManager();
 		manager.setRealm(jdbcRealm);
@@ -30,13 +41,12 @@ public class JdbcRealmTest {
 		SecurityUtils.setSecurityManager(manager);
 		Subject subject = SecurityUtils.getSubject();
 
-		UsernamePasswordToken token = new UsernamePasswordToken("joseph", "123456");
+		UsernamePasswordToken token = new UsernamePasswordToken("tom", "123456");
 		subject.login(token);
 
 		System.out.println("isAuthenticated:" + subject.isAuthenticated());
-
-		subject.checkRole("admin");
-		subject.checkPermission("user:update");
+		subject.checkRole("user");
+		subject.checkPermission("user:select");
 
 	}
 }
