@@ -1,4 +1,4 @@
-package realm;
+package realm.customrealm;
 
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UsernamePasswordToken;

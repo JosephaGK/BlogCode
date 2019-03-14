@@ -1,4 +1,4 @@
-package realm;
+package realm.customrealm.encryption;
 
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationInfo;
@@ -6,20 +6,22 @@ import org.apache.shiro.authc.AuthenticationToken;
 import org.apache.shiro.authc.SimpleAuthenticationInfo;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
+import org.apache.shiro.crypto.hash.Md5Hash;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
+import org.apache.shiro.util.ByteSource;
 
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-public class CustomRealm extends AuthorizingRealm {
+public class CustomEncryptRealm extends AuthorizingRealm {
 
 	Map<String,String> userMap = new HashMap<>(16);
 
 	{
-		userMap.put("joseph","joseph");
+		userMap.put("joseph","47ec2dd791e31e2ef2076caf64ed9b3d");
 		//设置这个realm的名称
 		super.setName("realmName");
 	}
@@ -75,6 +77,9 @@ public class CustomRealm extends AuthorizingRealm {
 		}
 		//3.认证成功返回认证信息对象
 		SimpleAuthenticationInfo authenticationInfo = new SimpleAuthenticationInfo("joseph", password, "realmName");
+		//如果密码使用了加盐的加密，认证信息对象中加入盐值
+		//ByteSource类提供util将字符串转为ByteSource
+		authenticationInfo.setCredentialsSalt(ByteSource.Util.bytes("test"));
 		return authenticationInfo;
 	}
 
@@ -85,5 +90,13 @@ public class CustomRealm extends AuthorizingRealm {
 	 */
 	private String getPasswordByUserName(String userName) {
 		return userMap.get(userName);
+	}
+
+	/**
+	 * 计算123456的加盐MD5值，这个值是模拟数据库中存着的密码值
+	 */
+	public static void main(String[] args) {
+		Md5Hash md5Hash = new Md5Hash("123456","test");
+		System.out.println(md5Hash);
 	}
 }
