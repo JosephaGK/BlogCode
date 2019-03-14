@@ -15,6 +15,7 @@
         <module>study-common</module>
         <module>study-quartz</module>
         <module>study-shiro</module>
+        <module>study-shiro-spring</module>
     </modules>
     <packaging>pom</packaging>
 
