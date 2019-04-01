@@ -6,9 +6,9 @@ package joseph.study.concurrent;
  * main线程修改running时，thread线程可以立刻感知到
  * 若不加volatile，main线程修改running时thread不能感知到
  */
-public class Test implements Runnable {
-//	public volatile boolean running = false;
-	public boolean running = false;
+public class VolatileTest implements Runnable {
+	public volatile boolean running = false;
+//	public boolean running = false;
 
 	@Override
 	public void run() {
@@ -20,13 +20,13 @@ public class Test implements Runnable {
 	}
 
 	public static void main(String[] args) {
-		Test test = new Test();
-		Thread thread = new Thread(test);
+		VolatileTest volatileTest = new VolatileTest();
+		Thread thread = new Thread(volatileTest);
 		thread.start();
 		try {
 			Thread.sleep(3000);
 			System.out.println("======修改状态======");
-			test.running = false;
+			volatileTest.running = false;
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
