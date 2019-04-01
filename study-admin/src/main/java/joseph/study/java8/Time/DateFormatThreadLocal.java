@@ -5,6 +5,9 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/**
+ * @author Joseph
+ */
 public class DateFormatThreadLocal {
 	
 	private static final ThreadLocal<DateFormat> df = new ThreadLocal<DateFormat>(){

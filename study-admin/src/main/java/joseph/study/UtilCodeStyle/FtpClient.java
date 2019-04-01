@@ -1,11 +1,5 @@
 package joseph.study.UtilCodeStyle;
 
-import joseph.study.util.ftp.FtpCli;
-import sun.util.locale.BaseLocale;
-import sun.util.locale.LocaleExtensions;
-
-import java.util.Locale;
-
 /**
  * @author Joseph
  */

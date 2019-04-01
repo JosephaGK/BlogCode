@@ -40,6 +40,7 @@ import java.util.HashMap;
  * 非对称加密需要公开密钥和私有密钥两组密钥，公开密钥和私有密钥是配对起来的，也就是说使用公开密钥进行数据加密，只有对应的私有密钥才能进行解密。
  * 对称加密算法：DES算法，3DES算法，TDEA算法，Blowfish算法，RC5算法，IDEA算法，AES算法。
  * 非对称加密算法：RSA、DSA、Elgamal、背包算法、Rabin、D-H、ECC。
+ * @author Joseph
  */
 public class EncodeUtilTest {
 

@@ -1,5 +1,9 @@
 package joseph.study.enumtype;
 
+/**
+ * @author Joseph
+ */
+
 public enum EnumType {
 
 	/**

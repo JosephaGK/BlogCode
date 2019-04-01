@@ -3,7 +3,10 @@ package joseph.study.elasticsearch;
 import org.elasticsearch.common.settings.Settings;
 import org.junit.Test;
 
-public class EsDemo {
+/**
+ * @author Joseph
+ */
+public class EsTest {
 
 	@Test
 	public  void test1(){

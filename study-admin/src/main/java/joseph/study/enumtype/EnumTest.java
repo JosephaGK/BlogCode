@@ -1,5 +1,8 @@
 package joseph.study.enumtype;
 
+/**
+ * @author Joseph
+ */
 public class EnumTest {
 	public static void main(String[] arg) {
 		Integer redKey = EnumType.RED.getKey();

@@ -15,7 +15,10 @@ import java.nio.file.StandardOpenOption;
  * @author Joseph
  */
 public class BlockingNIO2 {
-	//客户端
+	/**
+	 * 客户端
+	 * @throws IOException
+	 */
 	@Test
 	public void client() throws IOException{
 		SocketChannel sChannel = SocketChannel.open(new InetSocketAddress("127.0.0.1", 9898));
@@ -44,7 +47,10 @@ public class BlockingNIO2 {
 		sChannel.close();
 	}
 
-	//服务端
+	/**
+	 * 服务端
+	 * @throws IOException
+	 */
 	@Test
 	public void server() throws IOException {
 		ServerSocketChannel ssChannel = ServerSocketChannel.open();

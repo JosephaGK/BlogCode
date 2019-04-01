@@ -3,6 +3,9 @@ package joseph.study.http;
 import java.net.URL;
 import java.net.URLConnection;
 
+/**
+ * @author Joseph
+ */
 public class HttpOrigin {
 	public static void main(String[] arg) throws Exception {
 		String url = "http://127.0.0.1:8080/ssm-admin";

@@ -3,7 +3,10 @@ package joseph.study.thread;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
 
-public class TestCallable {
+/**
+ * @author Joseph
+ */
+public class CallableTest {
 	public static void main(String[] args) {
 		CallableDemo demo = new CallableDemo();
 		FutureTask<Integer> task = new FutureTask<>(demo);

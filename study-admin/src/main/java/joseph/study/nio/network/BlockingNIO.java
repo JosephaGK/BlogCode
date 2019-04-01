@@ -31,7 +31,10 @@ import java.nio.file.StandardOpenOption;
  * @author Joseph
  */
 public class BlockingNIO {
-	//客户端
+	/**
+	 * 客户端
+	 * @throws IOException
+	 */
 	@Test
 	public void client() throws IOException{
 		//1. 获取通道
@@ -54,7 +57,10 @@ public class BlockingNIO {
 		sChannel.close();
 	}
 
-	//服务端
+	/**
+	 * 服务端
+	 * @throws IOException
+	 */
 	@Test
 	public void server() throws IOException {
 		//1. 获取通道

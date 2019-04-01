@@ -3,6 +3,9 @@ package joseph.study.threadpool;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+/**
+ * @author Joseph
+ */
 public class ExecutorsFactory implements Runnable{
 
 	@Override public void run() {

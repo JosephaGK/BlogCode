@@ -1,5 +1,8 @@
 package joseph.study.classpath;
 
+/**
+ * @author Joseph
+ */
 public class FilePath {
 	public static void main(String[] arg){
 		System.out.println(FilePath.class.getResource(""));

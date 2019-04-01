@@ -10,10 +10,17 @@ import javax.servlet.annotation.WebFilter;
 import javax.servlet.annotation.WebInitParam;
 import java.io.IOException;
 
+/**
+ * @author Joseph
+ */
 @WebFilter(filterName = "myFilter", urlPatterns = { "/*" }, initParams = {
 		@WebInitParam(name = "ref", value = "test") })
 public class FilterAnnotation implements Filter {
-	// 初始化过滤器
+	/**
+	 * 初始化过滤器
+	 * @param config
+	 * @throws ServletException
+	 */
 	@Override
 	public void init(FilterConfig config) throws ServletException {
 		// 取得初始化参数

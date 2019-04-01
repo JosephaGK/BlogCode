@@ -26,9 +26,12 @@ import java.util.function.Supplier;
  * Predicate<T> : 断言型接口
  * 		boolean test(T t);
  *
+ * @author Joseph
  */
 public class FunctionInterface {
-	//Predicate<T> 断言型接口：
+	/**
+	 * Predicate<T> 断言型接口：
+	 */
 	@Test
 	public void test4(){
 		List<String> list = Arrays.asList("Hello", "joseph", "Lambda", "www", "ok");
@@ -39,7 +42,12 @@ public class FunctionInterface {
 		}
 	}
 
-	//需求：将满足条件的字符串，放入集合中
+	/**
+	 * 需求：将满足条件的字符串，放入集合中
+	 * @param list
+	 * @param pre
+	 * @return
+	 */
 	public List<String> filterStr(List<String> list, Predicate<String> pre){
 		List<String> strList = new ArrayList<>();
 
@@ -52,7 +60,9 @@ public class FunctionInterface {
 		return strList;
 	}
 
-	//Function<T, R> 函数型接口：
+	/**
+	 * Function<T, R> 函数型接口：
+	 */
 	@Test
 	public void test3(){
 		String newStr = strHandler("\t\t\t joseph   ", (str) -> str.trim());
@@ -62,12 +72,19 @@ public class FunctionInterface {
 		System.out.println(subStr);
 	}
 
-	//需求：用于处理字符串
+	/**
+	 * 需求：用于处理字符串
+	 * @param str
+	 * @param fun
+	 * @return
+	 */
 	public String strHandler(String str, Function<String, String> fun){
 		return fun.apply(str);
 	}
 
-	//Supplier<T> 供给型接口 :
+	/**
+	 * Supplier<T> 供给型接口 :
+	 */
 	@Test
 	public void test2(){
 		List<Integer> numList = getNumList(10, () -> (int)(Math.random() * 100));
@@ -77,7 +94,12 @@ public class FunctionInterface {
 		}
 	}
 
-	//需求：产生指定个数的整数，并放入集合中
+	/**
+	 * 需求：产生指定个数的整数，并放入集合中
+	 * @param num
+	 * @param sup
+	 * @return
+	 */
 	public List<Integer> getNumList(int num, Supplier<Integer> sup){
 		List<Integer> list = new ArrayList<>();
 
@@ -89,7 +111,9 @@ public class FunctionInterface {
 		return list;
 	}
 
-	//Consumer<T> 消费型接口 :
+	/**
+	 * Consumer<T> 消费型接口 :
+	 */
 	@Test
 	public void test1(){
 		happy(10000, (m) -> System.out.println("m"));
