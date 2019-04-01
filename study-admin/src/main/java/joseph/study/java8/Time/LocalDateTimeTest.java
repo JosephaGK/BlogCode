@@ -16,9 +16,14 @@ import java.util.Set;
 
 import org.junit.Test;
 
-public class TestLocalDateTime {
-	
-	//6.ZonedDate、ZonedTime、ZonedDateTime ： 带时区的时间或日期
+/**
+ * @author Joseph
+ */
+public class LocalDateTimeTest {
+
+	/**
+	 * 6.ZonedDate、ZonedTime、ZonedDateTime ： 带时区的时间或日期
+	 */
 	@Test
 	public void test7(){
 		LocalDateTime ldt = LocalDateTime.now(ZoneId.of("Asia/Shanghai"));
@@ -34,8 +39,9 @@ public class TestLocalDateTime {
 		set.forEach(System.out::println);
 	}
 
-	
-	//5. DateTimeFormatter : 解析和格式化日期或时间
+	/**
+	 * 5. DateTimeFormatter : 解析和格式化日期或时间
+	 */
 	@Test
 	public void test5(){
 //		DateTimeFormatter dtf = DateTimeFormatter.ISO_LOCAL_DATE;
@@ -50,8 +56,10 @@ public class TestLocalDateTime {
 		LocalDateTime newLdt = LocalDateTime.parse(strDate, dtf);
 		System.out.println(newLdt);
 	}
-	
-	//4. TemporalAdjuster : 时间校正器
+
+	/**
+	 * 4. TemporalAdjuster : 时间校正器
+	 */
 	@Test
 	public void test4(){
 	LocalDateTime ldt = LocalDateTime.now();
@@ -81,10 +89,12 @@ public class TestLocalDateTime {
 		System.out.println(ldt5);
 		
 	}
-	
-	//3.
-	//Duration : 用于计算两个“时间”间隔
-	//Period : 用于计算两个“日期”间隔
+
+	/**
+	 * 3.
+	 * Duration : 用于计算两个“时间”间隔
+	 * Period : 用于计算两个“日期”间隔
+	 */
 	@Test
 	public void test3(){
 		Instant ins1 = Instant.now();
@@ -109,8 +119,10 @@ public class TestLocalDateTime {
 		System.out.println(pe.getMonths());
 		System.out.println(pe.getDays());
 	}
-	
-	//2. Instant : 时间戳。 （使用 Unix 元年  1970年1月1日 00:00:00 所经历的毫秒值）
+
+	/**
+	 * 2. Instant : 时间戳。 （使用 Unix 元年  1970年1月1日 00:00:00 所经历的毫秒值）
+	 */
 	@Test
 	public void test2(){
 		Instant ins = Instant.now();  //默认使用 UTC 时区
@@ -124,8 +136,10 @@ public class TestLocalDateTime {
 		Instant ins2 = Instant.ofEpochSecond(5);
 		System.out.println(ins2);
 	}
-	
-	//1. LocalDate、LocalTime、LocalDateTime
+
+	/**
+	 * 1. LocalDate、LocalTime、LocalDateTime
+	 */
 	@Test
 	public void test1(){
 		LocalDateTime ldt = LocalDateTime.now();

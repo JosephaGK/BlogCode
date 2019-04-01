@@ -13,21 +13,21 @@ public class streams {
 		debugg();
 	}
 
-	public static void debugg(){
+	public static void debugg() {
 		//使用idea提供的Trace Current Stream Chain进行stream的debug
 		List<String> strings = Stream.of("C", "A", "B").sorted().collect(Collectors.toList());
 	}
 
-	public static void listObjTomapIntergerObj(){
+	public static void listObjTomapIntergerObj() {
 		List<User> users = Arrays.asList(new User(1, "Tomcat"), new User(2, "Apache"), new User(3, "Nginx"));
 		//方法一
-		Map<Integer, User> map = users.stream().collect(Collectors.toMap(obj -> obj.getId() , obj -> obj));
+		Map<Integer, User> map = users.stream().collect(Collectors.toMap(obj -> obj.getId(), obj -> obj));
 		//方法二maven-compiler-plugin
 		//Map<Integer, User> map = users.stream().collect(Collectors.toMap(User::getId , obj -> obj));
 		System.out.println(map);
 	}
 
-	public static void listMapTolistString(){
+	public static void listMapTolistString() {
 		List<Map<String, String>> list = new ArrayList<>();
 		Map<String, String> map1 = new HashMap<>();
 		map1.put("id", "101");
@@ -48,14 +48,14 @@ public class streams {
 		System.out.println(ids);
 	}
 
-	public static void strTomap(){
+	public static void strTomap() {
 		String str = "type=1&from=APP&source=homePage";
 		Map<String, String> map = Stream.of(str.split("&")).map(obj -> obj.split("=")).collect(Collectors.toMap(entry -> entry[0], entry -> entry[1]));
 		System.out.println(map);
 	}
 
-	public static void listStrTolistInteger(){
-		List<String> strs = Arrays.asList("1","2","3");
+	public static void listStrTolistInteger() {
+		List<String> strs = Arrays.asList("1", "2", "3");
 		List<Integer> ints = strs.stream().map(obj -> Integer.valueOf(obj)).collect(Collectors.toList());
 	}
 

@@ -9,7 +9,6 @@ import java.io.IOException;
 
 /**
  * @author Joseph Servlet 3.0增加注解
- *
  */
 @WebServlet(name = "HelloServlet", urlPatterns = { "/helloServlet" }, loadOnStartup = 1, initParams = {
 		@WebInitParam(name = "userName", value = "joseph"), @WebInitParam(name = "age", value = "18") })

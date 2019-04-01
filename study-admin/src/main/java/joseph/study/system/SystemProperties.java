@@ -6,7 +6,7 @@ import java.util.Properties;
  * @author Joseph
  */
 public class SystemProperties {
-	public static void main(String[] arg){
+	public static void main(String[] arg) {
 		//获取所有的属性
 		Properties properties = System.getProperties();
 		//遍历所有的属性

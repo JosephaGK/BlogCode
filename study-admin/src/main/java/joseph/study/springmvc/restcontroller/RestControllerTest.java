@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/RestController")
 public class RestControllerTest {
 	@RequestMapping("/getJsonObject")
-	public JSONObject getJsonObject(){
+	public JSONObject getJsonObject() {
 		JSONObject jsonObject = new JSONObject();
-		jsonObject.put("id",1);
-		jsonObject.put("name","gekun");
+		jsonObject.put("id", 1);
+		jsonObject.put("name", "gekun");
 		return jsonObject;
 	}
 }

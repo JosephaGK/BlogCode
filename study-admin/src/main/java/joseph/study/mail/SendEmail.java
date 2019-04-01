@@ -12,14 +12,30 @@ import java.util.Properties;
  * @author Joseph
  */
 public class SendEmail {
-	//发送邮箱的账号密码
-	private static String userName="942618763@qq.com";//账号
-	private static String password="doympitgprthbfbf";//16位STMP口令
-	private static String nickName="CESHI";//昵称,可自定义
-	private static String smtp="smtp.qq.com";//SMTP服务器地址
-	//收件人邮箱的账号昵称
-	private static String receiveUserName="gekun@lianxin-tech.com";//账号
-	private static String receiveNickName="AAAAA";//昵称,可自定义
+	/**
+	 * 发送邮箱的账号
+	 */
+	private static String userName="942618763@qq.com";
+	/**
+	 * 发送邮箱的密码16位STMP口令
+	 */
+	private static String password="doympitgprthbfbf";
+	/**
+	 * 昵称,可自定义
+	 */
+	private static String nickName="CESHI";
+	/**
+	 * SMTP服务器地址
+	 */
+	private static String smtp="smtp.qq.com";
+	/**
+	 * 收件人邮箱的账号
+	 */
+	private static String receiveUserName="gekun@lianxin-tech.com";
+	/**
+	 * 收件人邮箱的昵称可自定义
+	 */
+	private static String receiveNickName="AAAAA";
 
 	public static void main(String[] args) throws Exception {
 		//1、构建一个继承自javax.mail.Authenticator的具体类

@@ -16,7 +16,10 @@ import java.util.Scanner;
  * @author Joseph
  */
 public class NonBlockingNIO {
-	//客户端
+	/**
+	 * 客户端
+	 * @throws IOException
+	 */
 	@Test
 	public void client() throws IOException {
 		//1. 获取通道
@@ -43,7 +46,10 @@ public class NonBlockingNIO {
 		sChannel.close();
 	}
 
-	//服务端
+	/**
+	 * 服务端
+	 * @throws IOException
+	 */
 	@Test
 	public void server() throws IOException{
 		//1. 获取通道

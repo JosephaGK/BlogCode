@@ -3,6 +3,9 @@ package joseph.study.international;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
+/**
+ * @author Joseph
+ */
 public class InternationalTest {
 	public static void main(String[] arg){
 		Locale loc = new Locale("zh","CN");

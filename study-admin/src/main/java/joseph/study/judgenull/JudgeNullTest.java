@@ -6,6 +6,9 @@ import org.springframework.util.CollectionUtils;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * @author Joseph
+ */
 public class JudgeNullTest {
 	public static void main(String[] arg){
 	    //String判断为空

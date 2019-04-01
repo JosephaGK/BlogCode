@@ -4,6 +4,9 @@ import javax.servlet.ServletRequestEvent;
 import javax.servlet.ServletRequestListener;
 import javax.servlet.annotation.WebListener;
 
+/**
+ * @author Joseph
+ */
 @WebListener
 public class ListenerAnnotation implements ServletRequestListener {
 	@Override public void requestInitialized(ServletRequestEvent sre) {

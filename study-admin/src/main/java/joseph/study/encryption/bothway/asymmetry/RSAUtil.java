@@ -12,6 +12,9 @@ import java.security.spec.RSAPrivateKeySpec;
 import java.security.spec.RSAPublicKeySpec;
 import java.util.HashMap;
 
+/**
+ * @author Joseph
+ */
 public class RSAUtil {
 	/**
 	 * 生成公钥和私钥

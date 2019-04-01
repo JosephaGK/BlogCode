@@ -4,7 +4,7 @@
 <beans>
 
 	<!-- 总管理类 如果将lazy-init='false'那么容器启动就会执行调度程序 -->
-	<bean id="startTestTask" lazy-init="false" autowire="no"
+	<bean id="startTestTask" lazy-init="true" autowire="no"
 		class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
 		<property name="triggers">
 			<list>

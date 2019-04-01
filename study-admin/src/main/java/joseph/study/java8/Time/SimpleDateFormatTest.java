@@ -12,7 +12,10 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
-public class TestSimpleDateFormat {
+/**
+ * @author Joseph
+ */
+public class SimpleDateFormatTest {
 	
 	public static void main(String[] args) throws Exception {
 
