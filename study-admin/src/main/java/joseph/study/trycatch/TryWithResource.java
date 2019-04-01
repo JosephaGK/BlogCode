@@ -6,6 +6,9 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintStream;
 
+/**
+ * @author Joseph
+ */
 public class TryWithResource {
 	public static void main(String[] args) throws IOException {
 		String path = (TryWithResource.class.getResource("")+"TryWithResource.class").substring(5);

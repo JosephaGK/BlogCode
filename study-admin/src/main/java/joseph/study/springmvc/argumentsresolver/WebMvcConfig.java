@@ -12,7 +12,8 @@ import java.util.List;
  */
 @Component
 public class WebMvcConfig implements WebMvcConfigurer {
-	@Override public void addArgumentResolvers(List<HandlerMethodArgumentResolver> resolvers) {
+	@Override
+	public void addArgumentResolvers(List<HandlerMethodArgumentResolver> resolvers) {
 		// 配置自定义接收参数
 		WebMvcConfigurer.super.addArgumentResolvers(resolvers);
 		resolvers.add(new MyArgumentsResolver());

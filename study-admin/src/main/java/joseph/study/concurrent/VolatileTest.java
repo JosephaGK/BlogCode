@@ -5,6 +5,7 @@ package joseph.study.concurrent;
  * volatitle可以保证多线程修改数据时数据可见性
  * main线程修改running时，thread线程可以立刻感知到
  * 若不加volatile，main线程修改running时thread不能感知到
+ * @author Joseph
  */
 public class VolatileTest implements Runnable {
 	public volatile boolean running = false;

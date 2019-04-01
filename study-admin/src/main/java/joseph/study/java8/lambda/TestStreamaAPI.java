@@ -13,10 +13,13 @@ import org.junit.Test;
  * 1. 创建 Stream
  * 2. 中间操作
  * 3. 终止操作(终端操作)
+ * @author Joseph
  */
 public class TestStreamaAPI {
-	
-	//1. 创建 Stream
+
+	/**
+	 * 1.创建 Stream
+	 */
 	@Test
 	public void test1(){
 		//1. Collection 提供了两个方法  stream() 与 parallelStream()
@@ -41,8 +44,10 @@ public class TestStreamaAPI {
 		stream4.forEach(System.out::println);
 		
 	}
-	
-	//2. 中间操作
+
+	/**
+	 * 2. 中间操作
+	 */
 	List<Employee> emps = Arrays.asList(
 			new Employee(102, "李四", 59, 6666.66),
 			new Employee(101, "张三", 18, 9999.99),
@@ -60,8 +65,10 @@ public class TestStreamaAPI {
 		skip(n) —— 跳过元素，返回一个扔掉了前 n 个元素的流。若流中元素不足 n 个，则返回一个空流。与 limit(n) 互补
 		distinct——筛选，通过流所生成元素的 hashCode() 和 equals() 去除重复元素
 	 */
-	
-	//内部迭代：迭代操作 Stream API 内部完成
+
+	/**
+	 * 内部迭代：迭代操作 Stream API 内部完成
+	 */
 	@Test
 	public void test2(){
 		//所有的中间操作不会做任何的处理
@@ -74,8 +81,10 @@ public class TestStreamaAPI {
 		//只有当做终止操作时，所有的中间操作会一次性的全部执行，称为“惰性求值”
 		stream.forEach(System.out::println);
 	}
-	
-	//外部迭代
+
+	/**
+	 * 外部迭代
+	 */
 	@Test
 	public void test3(){
 		Iterator<Employee> it = emps.iterator();
@@ -89,7 +98,8 @@ public class TestStreamaAPI {
 	public void test4(){
 		emps.stream()
 			.filter((e) -> {
-				System.out.println("短路！"); // &&  ||
+				// &&  ||
+				System.out.println("短路！");
 				return e.getSalary() >= 5000;
 			}).limit(3)
 			.forEach(System.out::println);

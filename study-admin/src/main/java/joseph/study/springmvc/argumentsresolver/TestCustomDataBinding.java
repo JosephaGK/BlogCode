@@ -12,8 +12,8 @@ import java.util.List;
 @Controller("/CustomDataBinding")
 public class TestCustomDataBinding {
 	@RequestMapping("/test")
-	public void main(@ModelAttribute CustomDataBinding customDataBinding,@ModelAttribute List<Integer> idList ){
+	public void main(@ModelAttribute CustomDataBinding customDataBinding, @ModelAttribute List<Integer> idList) {
 		System.out.println(customDataBinding);
-		idList.forEach(e-> System.out.print(e));
+		idList.forEach(e -> System.out.print(e));
 	}
 }

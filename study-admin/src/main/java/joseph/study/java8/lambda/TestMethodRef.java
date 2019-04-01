@@ -23,9 +23,12 @@ import org.junit.Test;
  * 1. 类名 :: new
  * 三、数组引用
  * 	类型[] :: new;
+ * @author Joseph
  */
 public class TestMethodRef {
-	//数组引用
+	/**
+	 * 数组引用
+	 */
 	@Test
 	public void test8(){
 		Function<Integer, String[]> fun = (args) -> new String[args];
@@ -38,8 +41,10 @@ public class TestMethodRef {
 		Employee[] emps = fun2.apply(20);
 		System.out.println(emps.length);
 	}
-	
-	//构造器引用
+
+	/**
+	 * 构造器引用
+	 */
 	@Test
 	public void test7(){
 		Function<String, Employee> fun = Employee::new;
@@ -57,8 +62,10 @@ public class TestMethodRef {
 		Supplier<Employee> sup2 = Employee::new;
 		System.out.println(sup2.get());
 	}
-	
-	//类名 :: 实例方法名
+
+	/**
+	 * 类名 :: 实例方法名
+	 */
 	@Test
 	public void test5(){
 		BiPredicate<String, String> bp = (x, y) -> x.equals(y);
@@ -81,8 +88,10 @@ public class TestMethodRef {
 		System.out.println(fun2.apply(new Employee()));
 		
 	}
-	
-	//类名 :: 静态方法名
+
+	/**
+	 * 类名 :: 静态方法名
+	 */
 	@Test
 	public void test4(){
 		Comparator<Integer> com = (x, y) -> Integer.compare(x, y);
@@ -103,7 +112,9 @@ public class TestMethodRef {
 		System.out.println(fun2.apply(1.2, 1.5));
 	}
 
-	//对象的引用 :: 实例方法名
+	/**
+	 * 对象的引用 :: 实例方法名
+	 */
 	@Test
 	public void test2(){
 		Employee emp = new Employee(101, "张三", 18, 9999.99);

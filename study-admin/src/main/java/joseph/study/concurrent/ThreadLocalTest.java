@@ -1,8 +1,8 @@
 package joseph.study.concurrent;
 
 /**
- * @author Joseph
  * ThreadLocal定义的变量是线程本地变量，只在当前线程内可用
+ * @author Joseph
  */
 public class ThreadLocalTest {
 	private static final ThreadLocal<String> name = new ThreadLocal<>();
