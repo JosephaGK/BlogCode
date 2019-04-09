@@ -1,4 +1,4 @@
-package singleton;
+package create.singleton;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -18,7 +18,7 @@ public class SingletonBreakClient {
 
 		//利用反射直接调用私有构造器破解单例
 		//可以使用在构造方法中抛出异常来避免这种反射破解
-		Class<SingletonBreak> clazz = (Class<SingletonBreak>)Class.forName("singleton.SingletonBreak");
+		Class<SingletonBreak> clazz = (Class<SingletonBreak>)Class.forName("create.singleton.SingletonBreak");
 		Constructor<SingletonBreak> constructor = clazz.getDeclaredConstructor(null);
 		constructor.setAccessible(true);
 		SingletonBreak s3 = constructor.newInstance();

@@ -1,4 +1,4 @@
-package singleton;
+package create.singleton;
 
 /**
  * 懒汉式单例

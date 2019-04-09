@@ -1,4 +1,4 @@
-package singleton;
+package create.singleton;
 
 public class SingletonDemoClient {
 	public static void main(String[] args) {

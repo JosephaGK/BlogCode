@@ -1,4 +1,4 @@
-package singleton;
+package create.singleton;
 
 /**
  * 双重检验锁单例

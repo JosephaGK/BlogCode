@@ -1,4 +1,4 @@
-package singleton;
+package create.singleton;
 
 /**
  * 静态内部类单例

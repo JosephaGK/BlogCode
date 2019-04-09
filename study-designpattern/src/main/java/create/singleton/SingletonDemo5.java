@@ -1,4 +1,4 @@
-package singleton;
+package create.singleton;
 
 /**
  * 枚举单例(没有延迟加载)
