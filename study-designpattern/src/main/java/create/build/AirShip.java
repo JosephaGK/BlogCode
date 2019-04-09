@@ -1,10 +1,5 @@
 package create.build;
 
-/**
- * 尚学堂牌宇宙飞船
- * @author 尚学堂高淇 www.sxt.cn
- *
- */
 public class AirShip {
 	//轨道舱
 	private OrbitalModule orbitalModule;
