@@ -16,15 +16,6 @@
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 
-
-
-    <dependencies>
-        <dependency>
-            <groupId>org.mybatis.generator</groupId>
-            <artifactId>mybatis-generator-maven-plugin</artifactId>
-        </dependency>
-    </dependencies>
-
     <build>
         <plugins>
             <plugin>

@@ -9,7 +9,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>study-admin</module>
-        <module>study-designpattern</module>
+        <module>study-design-pattern</module>
         <module>study-mybatis-generator</module>
         <module>spring-soundcode</module>
         <module>study-common</module>
@@ -54,6 +54,7 @@
         <jedis.version>2.1.0</jedis.version>
         <aspectjweaver.version>1.7.4</aspectjweaver.version>
         <quartz.version>2.2.1</quartz.version>
+        <shiro.version>1.4.0</shiro.version>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -102,7 +103,7 @@
         </pluginManagement>
     </build>
 
-    <dependencyManagement>
+    <!--<dependencyManagement>-->
         <dependencies>
             <!--单元测试-->
             <dependency>
@@ -354,7 +355,24 @@
                 <version>${aspectjweaver.version}</version>
             </dependency>
             <!--切面开发-->
+            <!--shiro权限框架-->
+            <!--shiro权限框架-->
+            <dependency>
+                <groupId>org.apache.shiro</groupId>
+                <artifactId>shiro-core</artifactId>
+                <version>${shiro.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.shiro</groupId>
+                <artifactId>shiro-spring</artifactId>
+                <version>${shiro.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.shiro</groupId>
+                <artifactId>shiro-web</artifactId>
+                <version>${shiro.version}</version>
+            </dependency>
 
         </dependencies>
-    </dependencyManagement>
+    <!--</dependencyManagement>-->
 </project>
