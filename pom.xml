@@ -30,13 +30,13 @@
         <slf4j.version>1.7.21</slf4j.version>
         <logback.version>1.1.7</logback.version>
         <lombok.version>1.16.14</lombok.version>
-        <fastjson.version>1.2.53</fastjson.version>
+        <fastjson.version>1.2.57</fastjson.version>
         <servlet.version>4.0.1</servlet.version>
         <tiles.version>3.0.5</tiles.version>
         <jsp.version>2.0</jsp.version>
         <jstl.version>1.2</jstl.version>
         <freemarker.version>2.3.23</freemarker.version>
-        <spring.version>5.1.3.RELEASE</spring.version>
+        <spring.version>5.1.5.RELEASE</spring.version>
         <mybatis.version>3.4.6</mybatis.version>
         <mybatis-spring.version>1.3.0</mybatis-spring.version>
         <mybatis.generator.version>1.3.3</mybatis.generator.version>
@@ -181,11 +181,6 @@
                 <artifactId>tiles-jsp</artifactId>
                 <version>${tiles.version}</version>
             </dependency>
-            <dependency>
-                <groupId>org.apache.tiles</groupId>
-                <artifactId>tiles-jsp</artifactId>
-                <version>${tiles.version}</version>
-            </dependency>
             <!--tiles-->
             <!--jsp页面渲染模板引擎-->
             <dependency>
@@ -217,7 +212,42 @@
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
+                <artifactId>spring-aop</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-beans</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-core</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-expression</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
                 <artifactId>spring-tx</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-web</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context-support</artifactId>
                 <version>${spring.version}</version>
             </dependency>
             <!-- springmvc end -->
