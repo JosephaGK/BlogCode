@@ -33,8 +33,9 @@ public class TreeController {
 
 	@RequestMapping("/getTree")
 	@ResponseBody
-	public String getTree(){
-		return  JSON.toJSONString(getTreeJson("0",nodes));
+	public JSONArray getTree(){
+		return  getTreeJson("0",nodes);
+//		return  JSON.toJSONString(getTreeJson("0",nodes));
 	}
 
 	public static void main(String[] args) {
